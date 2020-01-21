@@ -12,5 +12,4 @@ class PassportUtil {
         System.out.println("Owner is changed");
         return passportTransport;
     }
-
 }
