@@ -13,9 +13,7 @@ public class DeserializeTest {
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(file))) {
             CreditCard creditCard= (CreditCard) objectInputStream.readObject();
             System.out.println(creditCard.toString());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
